@@ -40,7 +40,8 @@ driver is too old.
 | `dinput8.dll`, `OptiScaler.ini` | `GameFiles/` of dmitrysobolev/DD2-DLSS5 |
 
 **You supply `nvngx_dlssnr.dll` yourself** and place it in `payload\`. It is an NVIDIA file and
-is not redistributed here. `310.8.SF` is the build that covers RTX 20 through 50.
+is not redistributed here. The **DLSS-NR model** is available from the RenoDX Discord; `310.8.SF`
+is the build that covers RTX 20 through 50.
 
 ---
 

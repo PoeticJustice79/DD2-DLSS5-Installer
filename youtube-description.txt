@@ -1,0 +1,123 @@
+드래곤즈 도그마 2에 DLSS 5 뉴럴 렌더링 딸깍으로 넣는 방법입니다.
+3.2.0.0 업데이트 대응이고, 설치기는 직접 만들어서 공개했습니다.
+
+▼ 다운로드
+https://github.com/PoeticJustice79/DD2-DLSS5-Installer
+
+
+■ 필요한 것
+
+  · 드래곤즈 도그마 2 3.2.0.0
+  · RTX 그래픽카드
+  · NVIDIA 드라이버 616.56 이상
+
+  ※ 카드 범위는 넣는 NR 모델이 RTX 20~50 지원으로 표기돼 있고,
+     원본 가이드는 40/50 기준입니다. 영상은 RTX 5090에서 찍었습니다.
+
+
+■ 설치
+
+  1. 게임 완전히 종료
+  2. Install.cmd 실행
+  3. [Auto-detect] → [0. Get files] → [1. Check] → [2. Install]
+
+  기본 언어는 영어인데 우상단에서 한국어로 바꿀 수 있습니다.
+
+  ※ nvngx_dlssnr.dll 은 NVIDIA 파일이라 같이 배포하지 않습니다.
+     직접 구해서 payload 폴더에 넣으셔야 합니다. 나머지는 설치기가 받아옵니다.
+     이 파일("DLSS-NR model")은 RenoDX 디스코드에서 구하실 수 있습니다.
+     RTX 20~50 을 모두 지원하는 310.8.SF 를 권장합니다.
+
+
+■ 게임 안에서
+
+  1. 그래픽 설정 → 업스케일러 = NVIDIA DLSS
+  2. Insert 키 (ReShade가 아니라서 Home이 아닙니다)
+  3. DLSS Neural Rendering 펼치기 → Enable Neural Rendering
+  4. 초록색 Running 확인
+  5. 우하단 Save Settings
+
+  레이 트레이싱 GI를 켜고 쓰세요. NR은 레이트레이싱 노이즈를 정리하는
+  기능이라 GI가 꺼져 있으면 차이가 잘 안 보입니다.
+
+
+■ 프레임이 부족하면
+
+  DLSS Neural Rendering → Cost → Model resolution (기본 100%)
+
+  이 값을 낮추면 비용이 그만큼 줄어듭니다.
+  4K + 5090 기준 100%에서 프레임당 8ms 정도 먹습니다.
+
+
+■ 타임스탬프
+
+  00:00  인트로
+  00:00  DLSS 5 뉴럴 렌더링이 뭔지
+  00:00  준비물
+  00:00  설치기 사용법
+  00:00  게임 안에서 켜는 법
+  00:00  화질 비교
+  00:00  프레임 조절
+  00:00  되돌리기
+
+
+■ 알아두실 것
+
+  · 실험 단계 물건입니다. NVIDIA 정식 배포가 아닙니다.
+  · 게임 3.2.0.0 전용입니다. 업데이트가 오면 깨질 수 있습니다.
+  · ReShade, RenoDX, REFramework 모드와 같이 못 씁니다.
+    이미 있으면 설치기가 백업 폴더로 옮깁니다.
+  · 되돌리기는 설치기의 [Restore] 버튼입니다.
+  · 화질 차이는 컷신이나 인물 클로즈업에서 잘 보입니다.
+
+
+■ 출처
+
+  설치 방법      https://github.com/dmitrysobolev/DD2-DLSS5
+  OptiScaler     https://github.com/Dagherbou/OptiScaler_DLSSNR
+  REFramework    https://github.com/praydog/REFramework
+
+  설치기는 위 방법을 자동화한 것입니다. 원작자분들께 감사드립니다.
+
+
+────────────────────────────────────────────────────────
+
+[ENGLISH]
+
+How to get DLSS 5 Neural Rendering running in Dragon's Dogma 2 3.2.0.0.
+I built the installer and put it on GitHub.
+
+Download: https://github.com/PoeticJustice79/DD2-DLSS5-Installer
+
+REQUIREMENTS
+  Dragon's Dogma 2 3.2.0.0 / RTX card / NVIDIA driver 616.56+
+  The bundled NR model is documented for RTX 20-50; the upstream guide
+  targets 40/50. Filmed on an RTX 5090.
+
+INSTALL
+  1. Close the game
+  2. Run Install.cmd
+  3. [Auto-detect] -> [0. Get files] -> [1. Check] -> [2. Install]
+
+  You supply nvngx_dlssnr.dll yourself and drop it in payload\ — it is an
+  NVIDIA file and is not redistributed. Everything else is fetched for you.
+  The "DLSS-NR model" is available from the RenoDX Discord; 310.8.SF is the
+  build that covers RTX 20-50.
+
+IN GAME
+  Upscaler = NVIDIA DLSS, then press Insert (not Home — this is not ReShade).
+  Expand DLSS Neural Rendering, tick Enable, look for a green "Running".
+  Press Save Settings. Turn ray-traced GI on or the effect is hard to see.
+
+PERFORMANCE
+  DLSS Neural Rendering -> Cost -> Model resolution scales the cost directly.
+  Roughly 8 ms per frame at 100%, 4K, RTX 5090.
+
+NOTES
+  Experimental, not an official NVIDIA release. Tied to game build 3.2.0.0.
+  Cannot run alongside ReShade, RenoDX or REFramework mods. Single-player only.
+
+CREDITS
+  Install method: https://github.com/dmitrysobolev/DD2-DLSS5
+  OptiScaler:     https://github.com/Dagherbou/OptiScaler_DLSSNR
+  REFramework:    https://github.com/praydog/REFramework
