@@ -6,7 +6,7 @@ Add-Type -AssemblyName System.Windows.Forms, System.Drawing
 $Script:Root    = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Script:Payload = Join-Path $Script:Root 'payload'
 $Script:Game    = ''
-$Script:Lang    = if ((Get-Culture).Name -like 'ko*') { 'ko' } else { 'en' }
+$Script:Lang    = 'en'
 $Script:Entries = New-Object System.Collections.ArrayList
 $Script:StateKey = 'state_initial'
 $Script:StateArg = @()
